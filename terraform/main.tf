@@ -1,4 +1,4 @@
-﻿# This tells Terraform to talk to the Minikube running on the machine
+﻿# This tells Terraform to talk to the Minikube running on the vm
 
 provider "kubernetes" {
   config_path = "~/.kube/config"
