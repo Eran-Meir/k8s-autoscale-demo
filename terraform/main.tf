@@ -1,11 +1,10 @@
-﻿# This tells Terraform to talk to the Minikube running on the vm
-
-provider "kubernetes" {
+﻿provider "kubernetes" {
   config_path = "~/.kube/config"
 }
 
-resource "kubernetes_namespace" "demo" {
+resource "kubernetes_namespace_v1" "demo" {
   metadata {
-    name = "autoscale-demo"
+    # references the variable from variables.tf
+    name = var.namespace_name
   }
 }
